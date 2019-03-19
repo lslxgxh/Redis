@@ -10,6 +10,7 @@
 - 修改字符串时减少内存重分配次数。增长时使用free，缩短时惰性回收,暂时不回收内存，记入free，提供API在需要的时候真正释放。如果free不够用重新申请内存，`free = newLen < 1MB ? newLen : 1MB`(free最多1MB)
 - 二进制安全：SDS的buf属性被称为字节数组，保存二进制数据
 
+
 ![1552969355676](C:\Users\l84122200\AppData\Roaming\Typora\typora-user-images\1552969355676.png)
 
 ![1552969373913](C:\Users\l84122200\AppData\Roaming\Typora\typora-user-images\1552969373913.png)
